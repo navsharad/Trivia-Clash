@@ -1,0 +1,135 @@
+/* Universal styles */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+body {
+    color: #fefdff;
+    background-color: #252a2a;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Starting screen styles */
+
+.start-modal {
+    height: 400px;
+    width: 700px;
+    background-color: black;
+    border: 10px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to left, #ec1818, #0da8e6);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.start-modal h1 {
+    font-size: 40px;
+}
+
+.start-modal p {
+    font-size: 15px;
+    color: #ec1818;
+}
+
+.start-btn {
+    padding: 10px;
+    width: 50%;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    outline: none;
+}
+
+.start-btn:hover {
+    transition: 0.5s;
+    background-color: #0da8e6;
+    letter-spacing: 5px;
+}
+
+/* Game styles */
+
+main {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.score {
+    position: absolute;
+    top: 10%;
+    left: 0;
+    right: 0;
+    width: 300px;
+    margin: auto;
+    font-size: 25px;
+}
+
+.game-card {
+    height: 600px;
+    width: 700px;
+    background-color: black;
+    border: 10px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to left, #ec1818, #0da8e6);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.answers {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 50px;
+}
+
+.answer-btn {
+    background-color: black;
+    color: white;
+    border: 3px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to left, #0da8e6, #ec1818);
+    width: 200px;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+    outline: none;
+}
+
+.answer-btn:hover {
+    background-color: gray;
+}
+
+/* Responsive styles */
+
+@media (max-width: 750px) {
+    .game-card {
+        height: 70%;
+        width: 80%;
+    }
+    .answers {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 50px;
+    }
+}
+
+/* other styles */
+
+.hidden {
+    display: none;
+}
+
